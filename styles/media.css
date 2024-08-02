@@ -1,52 +1,57 @@
-/* General */
-
-@media (width >= 768px) {
-  .page {
-    padding: 20px;
-  }
-}
 
 /* Header */
 
 @media (width >= 768px) {
+
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .decor-rec::after {
+    top: 28px;
+    right: 28px;
+  }
+
   .header {
-    margin-block-end: 60px;
+    margin-block-end: 70px;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    ". footer";
+    padding: 20px 20px 0 20px;
   }
 
   .header__heading {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
-    transform: translateX(-20px);
-  }
-
-  .header__heading {
-    margin-block-end: 162px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
+    margin-block-end: 160px;
   }
 
   .header__theme-menu {
     margin: 146px 0 173px;
   }
 
-  .decorated-zone {
-    min-height: 95vh;
-  }
-
   .header__description {
     margin-block-end: 172px;
   }
 
-  :is(.header, .footer)::after { 
-    bottom: 15px;
-  }
+  .header::after {
+    left: 20px;
+    bottom: 10px;
+    align-self: end;
+    border-inline-start: 1px solid var(--decoration-color);
+    border-block-end: 1px solid var(--decoration-color);
+
+
 }
 
 @media (width >= 1024px) {
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    transform: translateX(-20px);
-  }
 
   .header__heading {
     margin-block-end: 114px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__theme-menu-button:hover {
@@ -54,17 +59,19 @@
     outline: 1px solid var(--button-border-color);
   }
 
+  .header {
+    margin-block-end: 65px;
+    grid-template-areas: 
+      "nav header"
+      "main main"
+      "footer footer";
+    }
+
   .header__theme-menu {
+    grid-area: nav;
     justify-self: center;
     align-self: flex-start;
     margin: auto;
-  }
-
-  .header {
-  grid-template-areas: 
-    "nav header"
-    "main main"
-    "footer footer";
   }
   
   .header__theme-menu-list {
@@ -88,19 +95,32 @@
 
 @media (width >= 768px) {
 
-  .content__block:not(:last-of-type),
+  /* .content__block:not(:last-of-type),
   .content__block_what {
     margin-block-start: 60px;
     margin-block-end: 20px;
+    padding: 0 20px;
+  } */
+
+  .content__block, .content__block_what {
+    /* margin-block-end: 60px; */
+    padding: 0 20px;
   }
 
   .content__block {
+    margin-block-end: 60px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: min-content;
   }
 
+  .content__block_what {
+    margin-block-end: 50px;
+  }
+
+
   .content__block-title {
+    margin: 0 0 20px 0;
     max-inline-size: 236px;
     padding-inline-end: 10px;
     grid-row: span 2;
@@ -121,10 +141,6 @@
   }
   .content__block_what > .content__block-title {
     inline-size: 230px;
-  }
-
-  .last-type {
-    margin-block-end: 55px;
   }
   
 }
@@ -177,6 +193,12 @@
 /* Pictures */
 
 @media (width >= 768px) {
+
+  .block__pictures {
+    margin-block-end: 60px;
+    padding: 0 20px;
+  }
+
   .content__block_pictures {
     max-block-size: 780px;
     margin-block-start: 20px;
@@ -189,6 +211,7 @@
     "cassette books ice-cream"
     "cassette street street"
     "cassette street street";
+    gap: 20px;
   }
 
   .sunset {
@@ -224,6 +247,7 @@
 
 @media (width:1024px) {
   .content__block_pictures {
+    margin-block-end: 65px;
     min-block-size: 1050px;
   }
 }
@@ -233,11 +257,22 @@
 @media (width >= 768px) {
 
   .footer {
-    min-block-size: 1024px;
+    padding: 0 20px 20px;
+    min-block-size: 1000px;
   }
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer::before {
+    top: 0;
+    right: 20px;
+  }
+
+  .footer::after {
+    bottom: 17px;
+    left: 20px;
   }
 }
 
@@ -245,4 +280,13 @@
   .footer {
     min-block-size: 768px;
   }
+
+  .footer::before {
+    top: 12px;
+  }
+
+  .footer::after {
+    bottom: 27px;
+  }
+}
 }
