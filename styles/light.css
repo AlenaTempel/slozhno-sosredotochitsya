@@ -13,7 +13,6 @@
   --accent-color-background:#f5f5f5;
   --text-color: #353430;
   --button-color: #353430;
-  --button-color-shadow: rgba(50, 49, 45, 0.4);
   --button-color-active: #353430; 
   --cover-image: url(../images/cover-image-light.png);
   --title-text-color: #ffc2e6;
@@ -23,6 +22,7 @@
   --title-accent-color: #353430;
   --rec: "";
   --bulb: none;
+  --button-color-shadow: rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,7 +31,6 @@
     --accent-color-background:#f5f5f5;
     --text-color: #353430;
     --button-color: #353430;
-    --button-color-shadow: rgba(50, 49, 45, 0.4);
     --button-color-active: #353430; 
     --cover-image: url(../images/cover-image-light.png);
     --title-text-color: #ffc2e6;
@@ -41,6 +40,7 @@
     --title-accent-color: #353430;
     --rec: "";
     --bulb: none;
+    --button-color-shadow: rgba(50, 49, 45, 0.4);
   }
 }
 
