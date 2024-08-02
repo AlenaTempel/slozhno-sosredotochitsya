@@ -23,7 +23,6 @@
   --title-accent-color: #353430;
   --rec: "";
   --bulb: none;
-  --decor-margin: 13px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -42,7 +41,6 @@
     --title-accent-color: #353430;
     --rec: "";
     --bulb: none;
-    --decor-margin: 13px;
   }
 }
 

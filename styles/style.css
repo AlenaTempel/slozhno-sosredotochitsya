@@ -8,6 +8,10 @@
   line-height: 130%;
   background-color: var(--accent-color-background);
   color: var(--text-color);
+  background-image: var(--cover-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Header */
@@ -83,11 +87,7 @@
     "nav nav"
     "main main"
     "footer footer";
-  min-height: 100vh;
-  background-image: var(--cover-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+    height: 100%;
 }
 
 .header__theme-menu {
@@ -149,7 +149,7 @@
   margin-block-end: 55px;
 }
 
-.title-decor{
+.title-decor {
   background: var(--background-accent);
   color:var(--title-color);
   font-family: var(--main-font);
