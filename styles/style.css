@@ -40,6 +40,7 @@
 
 .header::after {
   left: 10px;
+  bottom: 10px;
   align-self: end;
   border-inline-start: 1px solid var(--decoration-color);
   border-block-end: 1px solid var(--decoration-color);
@@ -78,22 +79,21 @@
 .header {
   padding: 10px 10px 0 10px;
   position: relative;
-  /* margin-block-end: 50px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 63px 165px 247px 148px;
   grid-template-areas: 
     "header header"
     "nav nav"
     "main main"
     "footer footer";
   height: 100vh;
+  min-block-size: 375px;
 }
 
 .header__theme-menu {
   grid-area: nav;
   justify-self: end;
-  margin: 37px 0 65px;
 }
 
 
@@ -146,7 +146,7 @@
   grid-area: footer;
   justify-self: end;
   margin-block-start: auto;
-  margin-block-end: 55px;
+  margin-block-end: 35px;
 }
 
 .title-decor {
@@ -161,7 +161,7 @@
 /* Main */
 
 .content__block-title {
-  margin-block-start: 50px;
+  margin-block-start: 45px;
   margin-block-end: 20px;
   color: var(--title-accent-color);
   font-family: var(--main-font);
