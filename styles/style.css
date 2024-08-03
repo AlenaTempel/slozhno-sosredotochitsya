@@ -253,6 +253,6 @@ h2 + .title-decor,
   justify-self: center;
   align-self: center;
   color: var(--title-text-color);
-  text-shadow: 2px 2px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--title-shadow);
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
 }
