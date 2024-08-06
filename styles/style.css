@@ -190,7 +190,7 @@
 }
 
 .section-how h3.section__list-item-header {
-  margin-block-end: 0;
+  margin-block-end: 20px;
 }
 
 .section-how .section__list-item-header:not(h3) {
@@ -210,7 +210,7 @@
 .section__link:hover {
   outline: none;
   border-bottom: 2px solid var(--text-color);
-}
+} 
 
 /* Pictures */
 
